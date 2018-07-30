@@ -80,10 +80,19 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdW-QP-Yxi">
                                 <rect key="frame" x="16" y="96" width="150" height="150"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8P9-Z9-Ymo">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" red="0.89477582359999996" green="0.89477582359999996" blue="0.89477582359999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="8P9-Z9-Ymo" secondAttribute="bottom" id="6q5-G2-hC5"/>
                                     <constraint firstAttribute="width" constant="150" id="DU5-B5-SlD"/>
+                                    <constraint firstItem="8P9-Z9-Ymo" firstAttribute="leading" secondItem="bdW-QP-Yxi" secondAttribute="leading" id="FR3-Sb-3kh"/>
                                     <constraint firstAttribute="height" constant="150" id="hfJ-6i-FIr"/>
+                                    <constraint firstItem="8P9-Z9-Ymo" firstAttribute="top" secondItem="bdW-QP-Yxi" secondAttribute="top" id="uDg-ux-kbT"/>
+                                    <constraint firstAttribute="trailing" secondItem="8P9-Z9-Ymo" secondAttribute="trailing" id="ufS-GJ-eh5"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fr0-0T-Rue">
@@ -91,6 +100,9 @@
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="0.6022335123" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Add Photo"/>
+                                <connections>
+                                    <action selector="changeImageButtonTapped:" destination="EhX-Gj-6iZ" eventType="touchUpInside" id="dzn-E3-iJW"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="KEM-hE-FFh">
                                 <rect key="frame" x="16" y="293" width="343" height="308"/>
@@ -201,10 +213,13 @@
                     <navigationItem key="navigationItem" id="e4I-uE-CDu">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="cFx-ox-0Qh"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageIcon" destination="8P9-Z9-Ymo" id="P9X-N1-tBd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WX0-0G-o0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2442" y="-216"/>
+            <point key="canvasLocation" x="2440.8000000000002" y="-216.34182908545728"/>
         </scene>
         <!--Employees List Table View Controller-->
         <scene sceneID="lxK-3f-efN">
@@ -292,9 +307,11 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hj2-co-ClG" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4am-77-xNa">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" id="4am-77-xNa">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
