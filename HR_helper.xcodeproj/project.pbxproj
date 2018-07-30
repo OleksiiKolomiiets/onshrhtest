@@ -75,8 +75,8 @@
 				F21D82AC210F222B0067E72E /* Views */,
 				F21D82AF210F29020067E72E /* Extension */,
 				F21D8296210F07380067E72E /* Main.storyboard */,
-				F21D82B9210F404A0067E72E /* EmployeeEntity.swift */,
-				F2208A4F210FABD5003E4A40 /* TypeError.swift */,
+				F2208A51210FB199003E4A40 /* Models */,
+				F2208A52210FB1B0003E4A40 /* Enums */,
 				F21D829E210F073F0067E72E /* Info.plist */,
 			);
 			path = HR_helper;
@@ -126,6 +126,22 @@
 				F21D82B3210F2CE60067E72E /* EmployeesListTableViewController.swift */,
 			);
 			path = AllEmployee;
+			sourceTree = "<group>";
+		};
+		F2208A51210FB199003E4A40 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F21D82B9210F404A0067E72E /* EmployeeEntity.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F2208A52210FB1B0003E4A40 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				F2208A4F210FABD5003E4A40 /* TypeError.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
