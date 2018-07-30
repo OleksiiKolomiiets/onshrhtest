@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		F21D8293210F07380067E72E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21D8292210F07380067E72E /* AppDelegate.swift */; };
-		F21D8295210F07380067E72E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21D8294210F07380067E72E /* ViewController.swift */; };
+		F21D8295210F07380067E72E /* AllEmployeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21D8294210F07380067E72E /* AllEmployeesViewController.swift */; };
 		F21D8298210F07380067E72E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21D8296210F07380067E72E /* Main.storyboard */; };
 		F21D829A210F073F0067E72E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F21D8299210F073F0067E72E /* Assets.xcassets */; };
 		F21D829D210F073F0067E72E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21D829B210F073F0067E72E /* LaunchScreen.storyboard */; };
+		F21D82A7210F09160067E72E /* EmployeeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21D82A6210F09160067E72E /* EmployeeDetailsViewController.swift */; };
+		F21D82A9210F092A0067E72E /* AddEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21D82A8210F092A0067E72E /* AddEmployeeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F21D828F210F07380067E72E /* HR_helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HR_helper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21D8292210F07380067E72E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F21D8294210F07380067E72E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F21D8294210F07380067E72E /* AllEmployeesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEmployeesViewController.swift; sourceTree = "<group>"; };
 		F21D8297210F07380067E72E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F21D8299210F073F0067E72E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F21D829C210F073F0067E72E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F21D829E210F073F0067E72E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F21D82A6210F09160067E72E /* EmployeeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsViewController.swift; sourceTree = "<group>"; };
+		F21D82A8210F092A0067E72E /* AddEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				F21D82A4210F08680067E72E /* Supporting Files */,
-				F21D8294210F07380067E72E /* ViewController.swift */,
+				F21D82A5210F08D00067E72E /* ViewControllers */,
 				F21D8296210F07380067E72E /* Main.storyboard */,
 				F21D829E210F073F0067E72E /* Info.plist */,
 			);
@@ -70,6 +74,16 @@
 				F21D829B210F073F0067E72E /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F21D82A5210F08D00067E72E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F21D8294210F07380067E72E /* AllEmployeesViewController.swift */,
+				F21D82A6210F09160067E72E /* EmployeeDetailsViewController.swift */,
+				F21D82A8210F092A0067E72E /* AddEmployeeViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,7 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F21D8295210F07380067E72E /* ViewController.swift in Sources */,
+				F21D82A7210F09160067E72E /* EmployeeDetailsViewController.swift in Sources */,
+				F21D8295210F07380067E72E /* AllEmployeesViewController.swift in Sources */,
+				F21D82A9210F092A0067E72E /* AddEmployeeViewController.swift in Sources */,
 				F21D8293210F07380067E72E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
