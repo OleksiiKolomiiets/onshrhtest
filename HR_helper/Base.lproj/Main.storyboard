@@ -38,7 +38,7 @@
         <!--Add Employee View Controller-->
         <scene sceneID="8G7-fM-F4m">
             <objects>
-                <viewController id="EhX-Gj-6iZ" customClass="AddEmployeeViewController" customModule="HR_helper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddEmployeeViewController" id="EhX-Gj-6iZ" customClass="AddEmployeeViewController" customModule="HR_helper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aCk-Z8-n9A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,20 +50,21 @@
             </objects>
             <point key="canvasLocation" x="2080.8000000000002" y="-244.22788605697153"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Employees List Table View Controller-->
         <scene sceneID="lxK-3f-efN">
             <objects>
-                <tableViewController id="pQl-X6-sbp" sceneMemberID="viewController">
+                <tableViewController id="pQl-X6-sbp" customClass="EmployeesListTableViewController" customModule="HR_helper" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ns5-wn-nxv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmployeeTableViewCell" id="rfq-1m-hhG">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="EmployeeTableViewCell" editingAccessoryType="detailButton" id="rfq-1m-hhG">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rfq-1m-hhG" id="aUw-NK-gA3">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -81,7 +82,7 @@
         <!--Employee Details View Controller-->
         <scene sceneID="gTX-9q-6AG">
             <objects>
-                <viewController id="C99-L5-MEB" customClass="EmployeeDetailsViewController" customModule="HR_helper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmployeeDetailsViewController" id="C99-L5-MEB" customClass="EmployeeDetailsViewController" customModule="HR_helper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v7x-UC-Ztq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
