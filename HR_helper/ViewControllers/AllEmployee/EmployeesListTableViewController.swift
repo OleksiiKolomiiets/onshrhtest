@@ -37,6 +37,8 @@ class EmployeesListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let embededVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: EmployeeDetailsViewController.reuseIdentifier) as? EmployeeDetailsViewController else { return }
+        embededVC.employeeModel = fakeData[indexPath.row]
+        
         self.navigationController?.pushViewController(embededVC, animated: true)
     }
 

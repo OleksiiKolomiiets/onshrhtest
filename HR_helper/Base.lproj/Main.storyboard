@@ -96,8 +96,11 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fr0-0T-Rue">
-                                <rect key="frame" x="198" y="156" width="72" height="30"/>
+                                <rect key="frame" x="198" y="156" width="100" height="30"/>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="0.6022335123" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="SeI-PG-2U6"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Add Photo"/>
                                 <connections>
@@ -214,6 +217,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="cFx-ox-0Qh"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="containerForAvatarImageView" destination="bdW-QP-Yxi" id="gmQ-VP-ZRI"/>
                         <outlet property="imageIcon" destination="8P9-Z9-Ymo" id="P9X-N1-tBd"/>
                     </connections>
                 </viewController>
@@ -294,9 +298,66 @@
                     <view key="view" contentMode="scaleToFill" id="v7x-UC-Ztq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Rfu-Rg-Uog">
+                                <rect key="frame" x="16" y="218" width="343" height="103"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oleksii Kolomiiets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="je8-ui-JTU">
+                                        <rect key="frame" x="80.5" y="0.0" width="182.5" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tk4-1d-DSx">
+                                        <rect key="frame" x="127" y="37" width="89" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 y.o. (7/24/1988)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89i-Mh-tyn">
+                                        <rect key="frame" x="94.5" y="74" width="154.5" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MPP-5u-5Yi">
+                                <rect key="frame" x="112" y="52" width="150" height="150"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gHU-Ps-v8o">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.89477582359999996" green="0.89477582359999996" blue="0.89477582359999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="gHU-Ps-v8o" firstAttribute="top" secondItem="MPP-5u-5Yi" secondAttribute="top" id="4DR-pg-4hq"/>
+                                    <constraint firstAttribute="height" constant="150" id="LNI-Zq-M61"/>
+                                    <constraint firstAttribute="width" constant="150" id="OHu-ez-Oaw"/>
+                                    <constraint firstItem="gHU-Ps-v8o" firstAttribute="leading" secondItem="MPP-5u-5Yi" secondAttribute="leading" id="mb6-R8-Xid"/>
+                                    <constraint firstAttribute="trailing" secondItem="gHU-Ps-v8o" secondAttribute="trailing" id="psA-rg-FVE"/>
+                                    <constraint firstAttribute="bottom" secondItem="gHU-Ps-v8o" secondAttribute="bottom" id="rQe-vH-caI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rfu-Rg-Uog" firstAttribute="top" secondItem="MPP-5u-5Yi" secondAttribute="bottom" constant="16" id="ByU-LD-FqP"/>
+                            <constraint firstItem="MPP-5u-5Yi" firstAttribute="top" secondItem="dJN-Aa-kTe" secondAttribute="top" constant="32" id="FkP-Z8-6Xo"/>
+                            <constraint firstItem="MPP-5u-5Yi" firstAttribute="leading" secondItem="dJN-Aa-kTe" secondAttribute="leading" constant="112" id="Zwi-vU-KQq"/>
+                            <constraint firstItem="dJN-Aa-kTe" firstAttribute="trailing" secondItem="MPP-5u-5Yi" secondAttribute="trailing" constant="113" id="nz1-kD-bjO"/>
+                            <constraint firstItem="Rfu-Rg-Uog" firstAttribute="leading" secondItem="dJN-Aa-kTe" secondAttribute="leading" constant="16" id="ql8-e1-uf1"/>
+                            <constraint firstItem="dJN-Aa-kTe" firstAttribute="trailing" secondItem="Rfu-Rg-Uog" secondAttribute="trailing" constant="16" id="xso-YA-wIH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dJN-Aa-kTe"/>
                     </view>
+                    <connections>
+                        <outlet property="avatarImageView" destination="gHU-Ps-v8o" id="CkJ-83-1Tk"/>
+                        <outlet property="birthdayLabel" destination="89i-Mh-tyn" id="ro1-9z-2iL"/>
+                        <outlet property="containerForAvatarImage" destination="MPP-5u-5Yi" id="emz-uW-F2x"/>
+                        <outlet property="nameLabel" destination="je8-ui-JTU" id="v7U-VF-QjD"/>
+                        <outlet property="positionLabel" destination="Tk4-1d-DSx" id="A3v-gm-RQ1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGB-eB-Djk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

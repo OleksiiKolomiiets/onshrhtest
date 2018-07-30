@@ -13,7 +13,8 @@ class AddEmployeeViewController: UIViewController {
     
     
     @IBOutlet var imageIcon: UIImageView!
-
+    @IBOutlet weak var containerForAvatarImageView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -63,7 +64,7 @@ extension AddEmployeeViewController: UIImagePickerControllerDelegate, UINavigati
             showAlert(title: "Error", message: TypeError.imageInvalid.localizedDescription)
             return
         }
-        
+        self.containerForAvatarImageView.backgroundColor = .clear
         self.imageIcon.image = image
     }
     
