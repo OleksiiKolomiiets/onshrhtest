@@ -14,6 +14,8 @@
 		F21D829D210F073F0067E72E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21D829B210F073F0067E72E /* LaunchScreen.storyboard */; };
 		F21D82A7210F09160067E72E /* EmployeeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21D82A6210F09160067E72E /* EmployeeDetailsViewController.swift */; };
 		F21D82A9210F092A0067E72E /* AddEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21D82A8210F092A0067E72E /* AddEmployeeViewController.swift */; };
+		F21D82AB210F22260067E72E /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21D82AA210F22260067E72E /* EmployeeTableViewCell.swift */; };
+		F21D82AE210F26E00067E72E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21D82AD210F26E00067E72E /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		F21D829E210F073F0067E72E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F21D82A6210F09160067E72E /* EmployeeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsViewController.swift; sourceTree = "<group>"; };
 		F21D82A8210F092A0067E72E /* AddEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewController.swift; sourceTree = "<group>"; };
+		F21D82AA210F22260067E72E /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
+		F21D82AD210F26E00067E72E /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				F21D82A5210F08D00067E72E /* ViewControllers */,
 				F21D8296210F07380067E72E /* Main.storyboard */,
 				F21D829E210F073F0067E72E /* Info.plist */,
+				F21D82AC210F222B0067E72E /* Viewes */,
+				F21D82AD210F26E00067E72E /* TableViewCell.swift */,
 			);
 			path = HR_helper;
 			sourceTree = "<group>";
@@ -84,6 +90,14 @@
 				F21D82A8210F092A0067E72E /* AddEmployeeViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F21D82AC210F222B0067E72E /* Viewes */ = {
+			isa = PBXGroup;
+			children = (
+				F21D82AA210F22260067E72E /* EmployeeTableViewCell.swift */,
+			);
+			path = Viewes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +174,8 @@
 				F21D82A7210F09160067E72E /* EmployeeDetailsViewController.swift in Sources */,
 				F21D8295210F07380067E72E /* AllEmployeesViewController.swift in Sources */,
 				F21D82A9210F092A0067E72E /* AddEmployeeViewController.swift in Sources */,
+				F21D82AE210F26E00067E72E /* TableViewCell.swift in Sources */,
+				F21D82AB210F22260067E72E /* EmployeeTableViewCell.swift in Sources */,
 				F21D8293210F07380067E72E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
