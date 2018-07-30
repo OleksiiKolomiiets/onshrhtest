@@ -66,7 +66,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="EmployeeTableViewCell" editingAccessoryType="disclosureIndicator" rowHeight="72" id="rfq-1m-hhG">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="EmployeeTableViewCell" editingAccessoryType="disclosureIndicator" rowHeight="72" id="rfq-1m-hhG" customClass="EmployeeTableViewCell" customModule="HR_helper" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rfq-1m-hhG" id="aUw-NK-gA3">
@@ -105,6 +105,11 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="QC6-MA-AxD" secondAttribute="bottom" id="xxe-Fj-u9X"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarView" destination="eG5-Zb-E60" id="yDw-iZ-ezD"/>
+                                    <outlet property="nameLabel" destination="QJM-2z-lOo" id="4Zh-6A-3Ir"/>
+                                    <outlet property="positionLabel" destination="7uf-Qu-kPt" id="7Tv-cA-kVg"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

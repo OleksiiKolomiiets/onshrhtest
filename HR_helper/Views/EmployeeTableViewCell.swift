@@ -10,6 +10,10 @@ import UIKit
 
 class EmployeeTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var positionLabel: UILabel!
+    @IBOutlet weak var avatarView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -18,4 +22,8 @@ class EmployeeTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
+    func configure(with model: EmployeeEntity) {
+        nameLabel.text = model.name
+        positionLabel.text = model.position
+    }
 }
