@@ -20,6 +20,7 @@
 		F21D82B8210F34CC0067E72E /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21D82B7210F34CC0067E72E /* ViewControllerExtension.swift */; };
 		F21D82BA210F404A0067E72E /* EmployeeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21D82B9210F404A0067E72E /* EmployeeEntity.swift */; };
 		F2208A50210FABD5003E4A40 /* TypeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2208A4F210FABD5003E4A40 /* TypeError.swift */; };
+		F2208A542110207E003E4A40 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2208A532110207E003E4A40 /* DateManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		F21D82B7210F34CC0067E72E /* ViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		F21D82B9210F404A0067E72E /* EmployeeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeEntity.swift; sourceTree = "<group>"; };
 		F2208A4F210FABD5003E4A40 /* TypeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeError.swift; sourceTree = "<group>"; };
+		F2208A532110207E003E4A40 /* DateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				F21D82B9210F404A0067E72E /* EmployeeEntity.swift */,
+				F2208A532110207E003E4A40 /* DateManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				F21D82AE210F26E00067E72E /* TableViewCell.swift in Sources */,
 				F21D82AB210F22260067E72E /* EmployeeTableViewCell.swift in Sources */,
 				F2208A50210FABD5003E4A40 /* TypeError.swift in Sources */,
+				F2208A542110207E003E4A40 /* DateManager.swift in Sources */,
 				F21D8293210F07380067E72E /* AppDelegate.swift in Sources */,
 				F21D82B4210F2CE60067E72E /* EmployeesListTableViewController.swift in Sources */,
 				F21D82BA210F404A0067E72E /* EmployeeEntity.swift in Sources */,

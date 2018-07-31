@@ -15,7 +15,7 @@ struct EmployeeEntity {
 }
 
 var fakeData: [EmployeeEntity] = [
-    EmployeeEntity(name: "Leo Messi", position: "Forward", birthDay: Date(timeIntervalSince1970: 153725975)),
-    EmployeeEntity(name: "Ivan Rakitic", position: "Midfilder", birthDay: Date(timeIntervalSince1970: 153725111)),
-    EmployeeEntity(name: "Ter Shtegen", position: "Goalkeeper", birthDay: Date(timeIntervalSince1970: 153722375))
+    EmployeeEntity(name: "Leo Messi", position: "Forward", birthDay: Date(timeIntervalSince1970: TimeInterval(153725975))),
+    EmployeeEntity(name: "Ivan Rakitic", position: "Midfilder", birthDay: Date(timeIntervalSince1970: TimeInterval(253725111))),
+    EmployeeEntity(name: "Ter Shtegen", position: "Goalkeeper", birthDay: Date(timeIntervalSince1970: TimeInterval(353722375)))
 ]

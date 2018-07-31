@@ -31,7 +31,8 @@ class EmployeeDetailsViewController: UIViewController {
     private func configure(with model: EmployeeEntity) {
         nameLabel.text = model.name
         positionLabel.text = model.position
-        birthdayLabel.text = model.birthDay.timeIntervalSince1970.description
+        let date = DateManager(date: model.birthDay, datePattern: .byDefault)
+        birthdayLabel.text = date?.resultString
     }
 
 }

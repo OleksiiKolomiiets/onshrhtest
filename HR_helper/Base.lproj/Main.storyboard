@@ -344,9 +344,8 @@
                         <constraints>
                             <constraint firstItem="Rfu-Rg-Uog" firstAttribute="top" secondItem="MPP-5u-5Yi" secondAttribute="bottom" constant="16" id="ByU-LD-FqP"/>
                             <constraint firstItem="MPP-5u-5Yi" firstAttribute="top" secondItem="dJN-Aa-kTe" secondAttribute="top" constant="32" id="FkP-Z8-6Xo"/>
-                            <constraint firstItem="MPP-5u-5Yi" firstAttribute="leading" secondItem="dJN-Aa-kTe" secondAttribute="leading" constant="112" id="Zwi-vU-KQq"/>
-                            <constraint firstItem="dJN-Aa-kTe" firstAttribute="trailing" secondItem="MPP-5u-5Yi" secondAttribute="trailing" constant="113" id="nz1-kD-bjO"/>
                             <constraint firstItem="Rfu-Rg-Uog" firstAttribute="leading" secondItem="dJN-Aa-kTe" secondAttribute="leading" constant="16" id="ql8-e1-uf1"/>
+                            <constraint firstItem="MPP-5u-5Yi" firstAttribute="centerX" secondItem="Rfu-Rg-Uog" secondAttribute="centerX" id="xIR-YB-OeU"/>
                             <constraint firstItem="dJN-Aa-kTe" firstAttribute="trailing" secondItem="Rfu-Rg-Uog" secondAttribute="trailing" constant="16" id="xso-YA-wIH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dJN-Aa-kTe"/>
