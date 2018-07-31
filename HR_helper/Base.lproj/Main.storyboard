@@ -177,6 +177,9 @@
                                                 <date key="date" timeIntervalSinceReferenceDate="554667108.66710401">
                                                     <!--2018-07-30 18:11:48 +0000-->
                                                 </date>
+                                                <connections>
+                                                    <action selector="dateValueChanged:" destination="EhX-Gj-6iZ" eventType="valueChanged" id="cFr-vt-0mH"/>
+                                                </connections>
                                             </datePicker>
                                         </subviews>
                                         <constraints>
@@ -214,9 +217,14 @@
                         <viewLayoutGuide key="safeArea" id="CVs-7N-MfO"/>
                     </view>
                     <navigationItem key="navigationItem" id="e4I-uE-CDu">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="cFx-ox-0Qh"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="cFx-ox-0Qh">
+                            <connections>
+                                <action selector="addingNewEmployeeIsDone:" destination="EhX-Gj-6iZ" id="iLf-Y8-fqa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="birthdayDatePicker" destination="3a6-3V-iit" id="Jcg-t8-LDC"/>
                         <outlet property="containerForAvatarImageView" destination="bdW-QP-Yxi" id="gmQ-VP-ZRI"/>
                         <outlet property="imageIcon" destination="8P9-Z9-Ymo" id="P9X-N1-tBd"/>
                     </connections>
@@ -245,7 +253,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eG5-Zb-E60">
                                             <rect key="frame" x="16" y="11" width="50" height="50"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="egc-yR-PAB">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="egc-yR-PAB">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="CT4-Ah-YDO"/>
@@ -255,6 +263,8 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.89477582359999996" green="0.89477582359999996" blue="0.89477582359999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="0Yw-As-BcC"/>
+                                                <constraint firstAttribute="width" constant="50" id="4PZ-Yj-HSJ"/>
                                                 <constraint firstItem="egc-yR-PAB" firstAttribute="leading" secondItem="eG5-Zb-E60" secondAttribute="leading" id="A4O-5c-col"/>
                                                 <constraint firstItem="egc-yR-PAB" firstAttribute="top" secondItem="eG5-Zb-E60" secondAttribute="top" id="Hib-AX-cQw"/>
                                                 <constraint firstAttribute="trailing" secondItem="egc-yR-PAB" secondAttribute="trailing" id="qfe-VW-HOR"/>

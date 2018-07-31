@@ -14,7 +14,31 @@ class AddEmployeeViewController: UIViewController {
     
     @IBOutlet var imageIcon: UIImageView!
     @IBOutlet weak var containerForAvatarImageView: UIView!
+    @IBOutlet weak var birthdayDatePicker: UIDatePicker!
+    
     var employeeIdentifier: Int?
+    var birthdayDate: Date?
+    
+    @IBAction func dateValueChanged(_ sender: UIDatePicker) {
+        birthdayDate = sender.date
+    }
+    
+    @IBAction func addingNewEmployeeIsDone(_ sender: UIBarButtonItem) {
+        let birthdayDate = self.birthdayDate ?? birthdayDatePicker.date
+        var avatar: AvatarManager?
+        if let image = imageIcon.image {
+            avatar = AvatarManager(with: image)
+        }
+        
+        let newEmployee = EmployeeEntity(name: "Fake",
+                                         position: "Fake",
+                                         birthDay: birthdayDate,
+                                         avatar: avatar)
+        
+        fakeData.append(newEmployee)
+        
+        self.navigationController?.popToRootViewController(animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +89,7 @@ extension AddEmployeeViewController: UIImagePickerControllerDelegate, UINavigati
             showAlert(title: "Error", message: TypeError.imageInvalid.localizedDescription)
             return
         }
-        fakeData[employeeIdentifier!].avatar = AvatarManager(with: image)
+//        fakeData[employeeIdentifier!].avatar = AvatarManager(with: image)
         self.containerForAvatarImageView.backgroundColor = .clear
         self.imageIcon.image = image
     }
