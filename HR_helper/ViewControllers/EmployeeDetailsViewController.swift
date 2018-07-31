@@ -17,6 +17,7 @@ class EmployeeDetailsViewController: UIViewController {
     @IBOutlet weak var birthdayLabel: UILabel!
     
     var employeeModel: EmployeeEntity?
+    var employeeIdentifier: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,9 @@ class EmployeeDetailsViewController: UIViewController {
         positionLabel.text = model.position
         let date = DateManager(date: model.birthDay, datePattern: .byDefault)
         birthdayLabel.text = date?.resultString
+        if let image: UIImage = fakeData[employeeIdentifier!].avatar?.image {
+            avatarImageView.image = image
+        }
     }
 
 }

@@ -13,6 +13,7 @@ class EmployeeTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var positionLabel: UILabel!
     @IBOutlet weak var avatarView: UIView!
+    @IBOutlet weak var avatarImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,5 +26,9 @@ class EmployeeTableViewCell: UITableViewCell {
     func configure(with model: EmployeeEntity) {
         nameLabel.text = model.name
         positionLabel.text = model.position
+        if let image = model.avatar?.image {
+            avatarImage.image = image
+            avatarView.backgroundColor = .clear
+        }
     }
 }

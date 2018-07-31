@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F212B35421108B7600311CCF /* AvatarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F212B35321108B7600311CCF /* AvatarManager.swift */; };
 		F21D8293210F07380067E72E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21D8292210F07380067E72E /* AppDelegate.swift */; };
 		F21D8295210F07380067E72E /* AllEmployeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21D8294210F07380067E72E /* AllEmployeesViewController.swift */; };
 		F21D8298210F07380067E72E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21D8296210F07380067E72E /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F212B35321108B7600311CCF /* AvatarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarManager.swift; sourceTree = "<group>"; };
 		F21D828F210F07380067E72E /* HR_helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HR_helper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21D8292210F07380067E72E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F21D8294210F07380067E72E /* AllEmployeesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEmployeesViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				F2208A51210FB199003E4A40 /* Models */,
 				F2208A52210FB1B0003E4A40 /* Enums */,
 				F21D829E210F073F0067E72E /* Info.plist */,
+				F212B35321108B7600311CCF /* AvatarManager.swift */,
 			);
 			path = HR_helper;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				F21D82AB210F22260067E72E /* EmployeeTableViewCell.swift in Sources */,
 				F2208A50210FABD5003E4A40 /* TypeError.swift in Sources */,
 				F2208A542110207E003E4A40 /* DateManager.swift in Sources */,
+				F212B35421108B7600311CCF /* AvatarManager.swift in Sources */,
 				F21D8293210F07380067E72E /* AppDelegate.swift in Sources */,
 				F21D82B4210F2CE60067E72E /* EmployeesListTableViewController.swift in Sources */,
 				F21D82BA210F404A0067E72E /* EmployeeEntity.swift in Sources */,

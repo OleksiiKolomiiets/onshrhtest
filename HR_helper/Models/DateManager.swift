@@ -32,7 +32,6 @@ class DateManager{
     }
     
     private func getString(from date: Date, pattern: DatePattern) -> String {
-//        let neededDate = Date(timeIntervalSince1970: TimeInterval(date))
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = DatePattern.byDefault.value
         
