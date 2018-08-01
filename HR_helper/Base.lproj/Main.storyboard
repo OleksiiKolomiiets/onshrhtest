@@ -44,7 +44,7 @@
                     <navigationItem key="navigationItem" id="4pr-SD-fDd">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ENb-hQ-uKJ">
                             <connections>
-                                <segue destination="EhX-Gj-6iZ" kind="push" id="zNo-83-oGP"/>
+                                <action selector="tappedAddButton:" destination="BYZ-38-t0r" id="CIY-2M-5ji"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -82,7 +82,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdW-QP-Yxi">
-                                <rect key="frame" x="16" y="96" width="150" height="150"/>
+                                <rect key="frame" x="16" y="52" width="150" height="150"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoAvatarIcon" translatesAutoresizingMaskIntoConstraints="NO" id="8P9-Z9-Ymo">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
@@ -99,7 +99,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fr0-0T-Rue">
-                                <rect key="frame" x="198" y="156" width="100" height="30"/>
+                                <rect key="frame" x="198" y="112" width="100" height="30"/>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="0.6022335123" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="SeI-PG-2U6"/>
@@ -111,7 +111,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="KEM-hE-FFh">
-                                <rect key="frame" x="16" y="293" width="343" height="308"/>
+                                <rect key="frame" x="16" y="249" width="343" height="308"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ao0-Tl-ILO">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>

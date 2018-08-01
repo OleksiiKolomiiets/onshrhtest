@@ -11,9 +11,13 @@ import UIKit
 class EmployeesListTableViewController: UITableViewController {
     
     var filteredEmployees: [EmployeeEntity]?
+    var delegate: AllEmployeesViewController?
+    var dataSource: DataSource!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        dataSource = DataSource()
+        delegate?.dataSource = dataSource
         tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
     
@@ -34,7 +38,7 @@ class EmployeesListTableViewController: UITableViewController {
         if let filteredEmployees = filteredEmployees {
             return filteredEmployees.count
         } else {
-            return fakeData.count
+            return dataSource.count
         }
     }
     
@@ -44,7 +48,7 @@ class EmployeesListTableViewController: UITableViewController {
         if let filteredEmployees = filteredEmployees {
             model = filteredEmployees[indexPath.row]
         } else {
-            model = fakeData[indexPath.row]
+            model = dataSource[indexPath.row]
         }
         cell.configure(with: model)
 
@@ -53,14 +57,15 @@ class EmployeesListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let embededVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: EmployeeDetailsViewController.reuseIdentifier) as? EmployeeDetailsViewController else { return }
-        embededVC.employeeModel = fakeData[indexPath.row]
+        embededVC.dataSource = dataSource
+        embededVC.employeeModel = dataSource[indexPath.row]
         embededVC.employeeIdentifier = indexPath.row
         self.navigationController?.pushViewController(embededVC, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete {
-            fakeData.remove(at: indexPath.row)
+            dataSource.delete(dataSource[indexPath.row])
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }

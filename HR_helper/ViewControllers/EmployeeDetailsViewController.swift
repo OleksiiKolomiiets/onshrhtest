@@ -18,6 +18,7 @@ class EmployeeDetailsViewController: UIViewController {
     
     var employeeModel: EmployeeEntity?
     var employeeIdentifier: Int?
+    var dataSource: DataSource!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +35,7 @@ class EmployeeDetailsViewController: UIViewController {
         positionLabel.text = model.position
         let date = DateManager(date: model.birthDay, datePattern: .byDefault)
         birthdayLabel.text = date?.resultString
-        avatarImageView.image = fakeData[employeeIdentifier!].avatar?.image ?? #imageLiteral(resourceName: "NoAvatarIcon")
+        avatarImageView.image = dataSource[employeeIdentifier!].avatar?.image ?? #imageLiteral(resourceName: "NoAvatarIcon")
     }
 
 }

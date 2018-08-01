@@ -22,6 +22,7 @@ class AddEmployeeViewController: UIViewController, UITextFieldDelegate {
     var birthdayDate: Date?
     var employeeName: String?
     var employeePosition: String?
+    var dataSource: DataSource!
     
     @IBAction func dateValueChanged(_ sender: UIDatePicker) {
         birthdayDate = sender.date
@@ -67,7 +68,7 @@ class AddEmployeeViewController: UIViewController, UITextFieldDelegate {
                                              birthDay: birthdayDate,
                                              avatar: avatar)
             
-            fakeData.append(newEmployee)
+            dataSource.add(newEmployee)
             
             self.navigationController?.popToRootViewController(animated: true)
         } else {
