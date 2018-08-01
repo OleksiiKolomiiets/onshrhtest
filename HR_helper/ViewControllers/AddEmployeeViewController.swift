@@ -9,18 +9,33 @@
 import UIKit
 import Photos
 
-class AddEmployeeViewController: UIViewController {
+class AddEmployeeViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet var imageIcon: UIImageView!
     @IBOutlet weak var containerForAvatarImageView: UIView!
     @IBOutlet weak var birthdayDatePicker: UIDatePicker!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var positionTextField: UITextField!
     
     var employeeIdentifier: Int?
     var birthdayDate: Date?
+    var employeeName: String?
+    var employeePosition: String?
     
     @IBAction func dateValueChanged(_ sender: UIDatePicker) {
         birthdayDate = sender.date
+    }
+    
+
+    @IBAction func putTextOnTextFeild(_ sender: UITextField) {
+        let text = sender.text
+        
+        if sender == nameTextField {
+            employeeName = text
+        } else if sender == positionTextField {
+            employeePosition = text
+        }
     }
     
     @IBAction func addingNewEmployeeIsDone(_ sender: UIBarButtonItem) {
@@ -29,15 +44,33 @@ class AddEmployeeViewController: UIViewController {
         if let image = imageIcon.image {
             avatar = AvatarManager(with: image)
         }
+        guard let employeeName = employeeName, let employeePosition = employeePosition else {
+            return
+        }
+        var isTextFeildIsFull = true
+        if employeeName.isEmpty {
+            nameTextField.placeholder = "Please, put employee's name."
+            nameTextField.backgroundColor = #colorLiteral(red: 1, green: 0.8977971094, blue: 0.8898261505, alpha: 1)
+            isTextFeildIsFull = false
+        }
+        if employeePosition.isEmpty {
+            positionTextField.placeholder = "Please, put employee's position."
+            positionTextField.backgroundColor = #colorLiteral(red: 1, green: 0.8977971094, blue: 0.8898261505, alpha: 1)
+            isTextFeildIsFull = false
+        }
         
-        let newEmployee = EmployeeEntity(name: "Fake",
-                                         position: "Fake",
-                                         birthDay: birthdayDate,
-                                         avatar: avatar)
-        
-        fakeData.append(newEmployee)
-        
-        self.navigationController?.popToRootViewController(animated: true)
+        if isTextFeildIsFull {
+            let newEmployee = EmployeeEntity(name: employeeName,
+                                             position: employeePosition,
+                                             birthDay: birthdayDate,
+                                             avatar: avatar)
+            
+            fakeData.append(newEmployee)
+            
+            self.navigationController?.popToRootViewController(animated: true)
+        } else {
+            self.view.layoutIfNeeded()
+        }
     }
     
     override func viewDidLoad() {
@@ -69,7 +102,7 @@ class AddEmployeeViewController: UIViewController {
     
     private func presentImagePicker() {
         let picker = UIImagePickerController()
-        picker.delegate = self        
+        picker.delegate = self
         picker.allowsEditing = false
         picker.sourceType = .photoLibrary
         picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!

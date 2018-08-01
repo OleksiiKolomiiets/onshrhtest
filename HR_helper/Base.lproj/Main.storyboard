@@ -23,26 +23,21 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0JQ-1N-IKo">
                                 <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <connections>
-                                    <segue destination="pQl-X6-sbp" kind="embed" id="zit-cn-STo"/>
+                                    <segue destination="pQl-X6-sbp" kind="embed" identifier="employeeList" id="zit-cn-STo"/>
                                 </connections>
                             </containerView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="mFt-LG-6ME">
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YtF-0n-VO8">
                                 <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vpz-FA-IBf"/>
-                                </connections>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="0JQ-1N-IKo" firstAttribute="top" secondItem="mFt-LG-6ME" secondAttribute="bottom" id="8j4-f8-uxl"/>
                             <constraint firstItem="0JQ-1N-IKo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GTe-jO-MbW"/>
-                            <constraint firstItem="mFt-LG-6ME" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i5i-Gd-tgd"/>
-                            <constraint firstItem="mFt-LG-6ME" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jNH-mV-QE3"/>
-                            <constraint firstItem="mFt-LG-6ME" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pcH-HZ-FIt"/>
                             <constraint firstItem="0JQ-1N-IKo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rdT-wn-BWh"/>
                             <constraint firstItem="0JQ-1N-IKo" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="veD-EC-fBd"/>
+                            <constraint firstItem="0JQ-1N-IKo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="120" id="xER-R4-8P1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -54,17 +49,25 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchDisplayController" destination="far-mr-o1X" id="X4A-jc-zbr"/>
+                        <outlet property="searchBar" destination="YtF-0n-VO8" id="4d4-Rp-m5B"/>
+                        <outlet property="searchDisplayController" destination="vpB-PN-6Z1" id="B06-sP-DwV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <searchDisplayController id="far-mr-o1X">
                     <connections>
                         <outlet property="delegate" destination="BYZ-38-t0r" id="BzY-hu-mAL"/>
-                        <outlet property="searchBar" destination="mFt-LG-6ME" id="wZv-nN-2dK"/>
                         <outlet property="searchContentsController" destination="BYZ-38-t0r" id="2m3-ag-U64"/>
                         <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="D3D-gG-QJM"/>
                         <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="jjv-Tk-xs5"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="vpB-PN-6Z1">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="S3d-Zq-lFc"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="Ag5-K5-mI1"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="P8n-gV-xT1"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="F7d-Gl-bFY"/>
                     </connections>
                 </searchDisplayController>
             </objects>
@@ -127,6 +130,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="putTextOnTextFeild:" destination="EhX-Gj-6iZ" eventType="editingDidEnd" id="l1L-lm-cBr"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -152,6 +158,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="putTextOnTextFeild:" destination="EhX-Gj-6iZ" eventType="editingDidEnd" id="zEl-IB-MXD"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -227,17 +236,19 @@
                         <outlet property="birthdayDatePicker" destination="3a6-3V-iit" id="Jcg-t8-LDC"/>
                         <outlet property="containerForAvatarImageView" destination="bdW-QP-Yxi" id="gmQ-VP-ZRI"/>
                         <outlet property="imageIcon" destination="8P9-Z9-Ymo" id="P9X-N1-tBd"/>
+                        <outlet property="nameTextField" destination="Ak1-Mu-gjJ" id="JCw-1s-nMP"/>
+                        <outlet property="positionTextField" destination="wr9-3U-EBM" id="uRy-gL-6YD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WX0-0G-o0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2440.8000000000002" y="-216.34182908545728"/>
+            <point key="canvasLocation" x="2441" y="116"/>
         </scene>
         <!--Employees List Table View Controller-->
         <scene sceneID="lxK-3f-efN">
             <objects>
                 <tableViewController id="pQl-X6-sbp" customClass="EmployeesListTableViewController" customModule="HR_helper" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ns5-wn-nxv">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ns5-wn-nxv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="547"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -386,7 +397,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGB-eB-Djk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2441" y="557"/>
+            <point key="canvasLocation" x="2441" y="912"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M35-wq-mwI">
