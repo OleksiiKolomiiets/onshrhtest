@@ -26,9 +26,6 @@ class EmployeeTableViewCell: UITableViewCell {
     func configure(with model: EmployeeEntity) {
         nameLabel.text = model.name
         positionLabel.text = model.position
-        if let image = model.avatar?.image {
-            avatarImage.image = image
-            avatarView.backgroundColor = .clear
-        }
+        avatarImage.image = model.avatar?.image ?? #imageLiteral(resourceName: "NoAvatarIcon")
     }
 }

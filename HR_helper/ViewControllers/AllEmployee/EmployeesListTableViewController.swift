@@ -63,7 +63,7 @@ class EmployeesListTableViewController: UITableViewController {
             fakeData.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
-    }    
+    }
     
 
 }

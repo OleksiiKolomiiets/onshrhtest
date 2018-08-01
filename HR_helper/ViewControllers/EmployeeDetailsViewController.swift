@@ -34,9 +34,7 @@ class EmployeeDetailsViewController: UIViewController {
         positionLabel.text = model.position
         let date = DateManager(date: model.birthDay, datePattern: .byDefault)
         birthdayLabel.text = date?.resultString
-        if let image: UIImage = fakeData[employeeIdentifier!].avatar?.image {
-            avatarImageView.image = image
-        }
+        avatarImageView.image = fakeData[employeeIdentifier!].avatar?.image ?? #imageLiteral(resourceName: "NoAvatarIcon")
     }
 
 }
