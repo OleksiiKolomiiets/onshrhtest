@@ -9,6 +9,8 @@
 import UIKit
 
 class EmployeesListTableViewController: UITableViewController {
+    
+    var filteredEmployees: [EmployeeEntity]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +31,22 @@ class EmployeesListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let numberOfRowsInSection = fakeData.count
-        return numberOfRowsInSection
+        if let filteredEmployees = filteredEmployees {
+            return filteredEmployees.count
+        } else {
+            return fakeData.count
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: EmployeeTableViewCell.reuseIdentifier, for: indexPath) as? EmployeeTableViewCell else { return UITableViewCell() }
-        cell.configure(with: fakeData[indexPath.row])
+        var model: EmployeeEntity
+        if let filteredEmployees = filteredEmployees {
+            model = filteredEmployees[indexPath.row]
+        } else {
+            model = fakeData[indexPath.row]
+        }
+        cell.configure(with: model)
 
         return cell
     }
