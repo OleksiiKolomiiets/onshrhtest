@@ -26,9 +26,13 @@ class AddEmployeeViewController: UIViewController, UITextFieldDelegate {
     @IBAction func dateValueChanged(_ sender: UIDatePicker) {
         birthdayDate = sender.date
     }
+   
+    @IBAction func startToWrite(_ sender: UITextField) {
+        sender.backgroundColor = .white
+        sender.placeholder = ""
+    }
     
-
-    @IBAction func putTextOnTextFeild(_ sender: UITextField) {
+    @IBAction func writeText(_ sender: UITextField) {        
         let text = sender.text
         
         if sender == nameTextField {
@@ -44,24 +48,22 @@ class AddEmployeeViewController: UIViewController, UITextFieldDelegate {
         if let image = imageIcon.image {
             avatar = AvatarManager(with: image)
         }
-        guard let employeeName = employeeName, let employeePosition = employeePosition else {
-            return
-        }
+        
         var isTextFeildIsFull = true
-        if employeeName.isEmpty {
+        if employeeName == nil || (employeeName?.isEmpty)! {
             nameTextField.placeholder = "Please, put employee's name."
             nameTextField.backgroundColor = #colorLiteral(red: 1, green: 0.8977971094, blue: 0.8898261505, alpha: 1)
             isTextFeildIsFull = false
         }
-        if employeePosition.isEmpty {
+        if employeePosition == nil || (employeePosition?.isEmpty)! {
             positionTextField.placeholder = "Please, put employee's position."
             positionTextField.backgroundColor = #colorLiteral(red: 1, green: 0.8977971094, blue: 0.8898261505, alpha: 1)
             isTextFeildIsFull = false
         }
         
         if isTextFeildIsFull {
-            let newEmployee = EmployeeEntity(name: employeeName,
-                                             position: employeePosition,
+            let newEmployee = EmployeeEntity(name: employeeName!,
+                                             position: employeePosition!,
                                              birthDay: birthdayDate,
                                              avatar: avatar)
             
