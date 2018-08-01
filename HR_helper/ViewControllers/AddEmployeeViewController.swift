@@ -69,8 +69,7 @@ class AddEmployeeViewController: UIViewController {
     
     private func presentImagePicker() {
         let picker = UIImagePickerController()
-        picker.delegate = self
-        
+        picker.delegate = self        
         picker.allowsEditing = false
         picker.sourceType = .photoLibrary
         picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
@@ -89,7 +88,6 @@ extension AddEmployeeViewController: UIImagePickerControllerDelegate, UINavigati
             showAlert(title: "Error", message: TypeError.imageInvalid.localizedDescription)
             return
         }
-//        fakeData[employeeIdentifier!].avatar = AvatarManager(with: image)
         self.containerForAvatarImageView.backgroundColor = .clear
         self.imageIcon.image = image
     }

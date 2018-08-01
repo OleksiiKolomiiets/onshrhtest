@@ -46,5 +46,13 @@ class EmployeesListTableViewController: UITableViewController {
         embededVC.employeeIdentifier = indexPath.row
         self.navigationController?.pushViewController(embededVC, animated: true)
     }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            fakeData.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }    
+    
 
 }
