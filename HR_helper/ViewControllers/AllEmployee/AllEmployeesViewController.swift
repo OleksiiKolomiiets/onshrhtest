@@ -36,7 +36,7 @@ class AllEmployeesViewController: UIViewController {
     }
     
     func filterContentForSearchText(_ searchText: String) {
-        filteredEmployees = fakeData.filter({( employee : EmployeeEntity) -> Bool in
+        filteredEmployees = dataSource.getAll().filter({( employee : EmployeeEntity) -> Bool in
             return employee.name.lowercased().contains(searchText.lowercased())
         })
         if searchText.isEmpty {
