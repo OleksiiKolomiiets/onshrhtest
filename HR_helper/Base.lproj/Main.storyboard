@@ -160,7 +160,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
-                                                    <action selector="startToWrite:" destination="EhX-Gj-6iZ" eventType="editingDidEnd" id="bKA-I5-eMU"/>
+                                                    <action selector="startToWrite:" destination="EhX-Gj-6iZ" eventType="editingDidBegin" id="5J2-E0-r4C"/>
                                                     <action selector="writeText:" destination="EhX-Gj-6iZ" eventType="editingChanged" id="aEP-q7-wTl"/>
                                                 </connections>
                                             </textField>
